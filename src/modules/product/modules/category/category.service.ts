@@ -14,7 +14,7 @@ export class CategoryService {
   async getTree() {
     const asArray = await this.categoryModel.find();
     const result = arrToTree(asArray);
-    return result;
+    return result.children;
   }
 }
 
