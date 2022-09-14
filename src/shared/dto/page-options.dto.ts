@@ -23,7 +23,7 @@ export class PageOptionsDto {
   @Min(10)
   @Max(50)
   @IsOptional()
-  readonly take: number = 40;
+  readonly take: number = 10;
 
   @ApiPropertyOptional({})
   @IsOptional()
