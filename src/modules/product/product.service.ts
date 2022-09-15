@@ -15,6 +15,8 @@ export class ProductService {
   async getMany(options: PageOptionsDto): Promise<PageDto<Product>> {
     const filter = {};
 
+    options.search && (filter['title'] = { $regex: options.search, $options: 'i' });
+
     options.category && (filter['category'] = options.category);
 
     options.minPrice && setMinRange('price', options.minPrice);
