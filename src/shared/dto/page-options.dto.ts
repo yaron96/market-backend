@@ -27,6 +27,10 @@ export class PageOptionsDto {
 
   @ApiPropertyOptional({})
   @IsOptional()
+  readonly search: string;
+
+  @ApiPropertyOptional({})
+  @IsOptional()
   readonly category: any = [];
 
   @ApiPropertyOptional({})
